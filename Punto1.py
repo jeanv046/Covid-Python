@@ -29,3 +29,10 @@ print("")
 print(data["Recuperado"].unique().tolist())
 print("Número de personas que se encuentran recuperados: ")
 print(len(data.loc[(data["Recuperado"] == "Recuperado")]))
+
+#Punto 6
+print("")
+print(data["Estado"].unique().tolist())
+print("Número de personas que ha fallecido: ")
+print(len(data.loc[(data["Estado"] == "Fallecido")]))
+
