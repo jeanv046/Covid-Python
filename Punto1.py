@@ -18,3 +18,11 @@ print("")
 print("Los municipios afectados son...")
 print(data["Nombre municipio"].unique().tolist())
 
+#Punto 4
+print("")
+print(data["Ubicación del caso"].unique().tolist())
+print(len(data.loc[(data["Ubicación del caso"] == "casa") | (data["Ubicación del caso"] == "Casa") | (data["Ubicación del caso"] == "CASA")]  ))
+
+
+
+
