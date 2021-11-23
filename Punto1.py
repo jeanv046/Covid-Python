@@ -21,8 +21,7 @@ print(data["Nombre municipio"].unique().tolist())
 #Punto 4
 print("")
 print(data["Ubicación del caso"].unique().tolist())
+print("El numero de personas que se encuentran en atención en casa son:")
 print(len(data.loc[(data["Ubicación del caso"] == "casa") | (data["Ubicación del caso"] == "Casa") | (data["Ubicación del caso"] == "CASA")]  ))
-
-
 
 
