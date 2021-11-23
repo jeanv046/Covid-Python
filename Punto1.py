@@ -12,3 +12,9 @@ print(len(data))
 print("")
 print("El numero de municipios afectados es {}".format(len(data["Nombre municipio"].unique())))
 
+
+#Punto 3
+print("")
+print("Los municipios afectados son...")
+print(data["Nombre municipio"].unique().tolist())
+
