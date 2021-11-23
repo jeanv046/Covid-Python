@@ -24,4 +24,8 @@ print(data["Ubicación del caso"].unique().tolist())
 print("El numero de personas que se encuentran en atención en casa son:")
 print(len(data.loc[(data["Ubicación del caso"] == "casa") | (data["Ubicación del caso"] == "Casa") | (data["Ubicación del caso"] == "CASA")]  ))
 
-
+#Punto 5
+print("")
+print(data["Recuperado"].unique().tolist())
+print("Número de personas que se encuentran recuperados: ")
+print(len(data.loc[(data["Recuperado"] == "Recuperado")]))
