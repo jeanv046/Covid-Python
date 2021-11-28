@@ -36,3 +36,34 @@ print(data["Estado"].unique().tolist())
 print("Número de personas que ha fallecido: ")
 print(len(data.loc[(data["Estado"] == "Fallecido")]))
 
+#punto 7
+print("")
+print(data["Tipo de contagio"].unique().tolist())
+print(data.loc[(data["Tipo de contagio"] == "Importado")])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
