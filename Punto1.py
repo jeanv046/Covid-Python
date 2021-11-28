@@ -41,6 +41,9 @@ print("")
 print(data["Tipo de contagio"].unique().tolist())
 print(data.loc[(data["Tipo de contagio"] == "Importado")])
 
+#punto 8
+print("")
+print("El numero de departamentos afectados es {}".format(len(data["Nombre departamento"].unique())))
 
 
 
