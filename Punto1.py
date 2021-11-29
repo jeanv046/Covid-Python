@@ -105,6 +105,11 @@ dat = data.groupby(['Nombre departamento', 'Nombre municipio', 'Sexo'])
 cantidad = dat.Edad.mean()
 print("la cantidad de mujeres y hombres contagiados: {}".format(cantidad))
 
+#Punto 20
+print("")
+conta = data.groupby('Nombre del país').size().sort_values(ascending=False)
+print("El número de contagiados por país de procedencia: {}".format(conta))
+
 
 
 
