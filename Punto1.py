@@ -100,6 +100,11 @@ dat = data.groupby(['Nombre departamento', 'Nombre municipio', 'Sexo'])
 cantidad = dat.size()
 print("la cantidad de mujeres y hombres contagiados: {}".format(cantidad))
 
+#Punto 19
+dat = data.groupby(['Nombre departamento', 'Nombre municipio', 'Sexo'])
+cantidad = dat.Edad.mean()
+print("la cantidad de mujeres y hombres contagiados: {}".format(cantidad))
+
 
 
 
