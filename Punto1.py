@@ -1,6 +1,7 @@
 
 
 import pandas
+import numpy as np
 filename = 'covid_22_noviembre.csv'
 data = pandas.read_csv(filename, header=0)
 
@@ -121,6 +122,15 @@ mor = ((canti / canti.sum()) * 100)['Fallecido']
 canti = data.groupby('Recuperado').size()
 Rec = ((canti / canti.sum()) * 100)['Recuperado']
 print("tasa de mortalidad {}%, recuperación {}% de Colombia".format(round(mor, 2), round(Rec, 2)))
+
+
+def calculoOr(a):
+    return np.logical_or(a == 'Fallecido', a == 'Recuperado')
+#Punto 23
+datafil = data[calculoOr(data['Estado'])]
+canti = datafil.groupby(['Nombre departamento', 'Estado']).size()
+tasaMor = ((canti / canti.sum()) * 100)
+print("tasa de mortalidad y recuperación departamento: {}".format(tasaMor))
 
 
 
