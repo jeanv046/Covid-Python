@@ -95,6 +95,11 @@ agrupado = data.groupby(['Nombre departamento'])
 ordenado = agrupado.size().sort_values(ascending=False)
 print("las ciudades con mas casos de contagiados: {}".format(ordenado))
 
+#Punto 18
+dat = data.groupby(['Nombre departamento', 'Nombre municipio', 'Sexo'])
+cantidad = dat.size()
+print("la cantidad de mujeres y hombres contagiados: {}".format(cantidad))
+
 
 
 
