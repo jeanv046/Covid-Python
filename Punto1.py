@@ -138,6 +138,11 @@ canti = datafil.groupby(['Nombre departamento', 'Estado']).size()
 tasaMor = ((canti / canti.sum()) * 100)
 print("tasa de mortalidad y recuperación ciudad: {}".format(tasaMor))
 
+#Punto 25
+print("")
+grupo = data.groupby(['Nombre departamento', 'Ubicación del caso']).size()
+print("ciudad la cantidad de personas por atención: {}".format(grupo))
+
 
 
 
