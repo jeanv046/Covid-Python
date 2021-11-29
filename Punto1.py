@@ -143,6 +143,12 @@ print("")
 grupo = data.groupby(['Nombre departamento', 'Ubicación del caso']).size()
 print("ciudad la cantidad de personas por atención: {}".format(grupo))
 
+#Punto 26
+print("")
+dat = data.groupby(['Nombre departamento', 'Sexo'])
+cantidad = dat.Edad.mean()
+print("la cantidad de mujeres y hombres contagiados: {}".format(round(cantidad, 0)))
+
 
 
 
