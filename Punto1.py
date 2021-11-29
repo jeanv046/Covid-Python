@@ -73,6 +73,11 @@ rec_dep = rec.groupby('Nombre departamento').size()
 rec_dep_ord = rec_dep.sort_values(ascending=False).head(10)
 print("Los 10 departamentos con mas Recuperados: {}".format(rec_dep_ord))
 
+#Punto 14
+datos_agrupados = data.groupby('Nombre municipio')
+dep_cont = datos_agrupados.size().sort_values(ascending=False).head(10)
+print("Los 10 municipios mas afectados: {}".format(dep_cont))
+
 
 
 
