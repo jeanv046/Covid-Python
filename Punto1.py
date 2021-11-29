@@ -78,6 +78,13 @@ datos_agrupados = data.groupby('Nombre municipio')
 dep_cont = datos_agrupados.size().sort_values(ascending=False).head(10)
 print("Los 10 municipios mas afectados: {}".format(dep_cont))
 
+#Punto 15
+fallecidos = data[data['Estado'] == 'Fallecido']
+fall_dep = fallecidos.groupby('Nombre municipio').size()
+fall_dep_ord = fall_dep.sort_values(ascending=False).head(10)
+print("Los 10 municipios con mas fallecidos: {}".format(fall_dep_ord))
+
+
 
 
 
