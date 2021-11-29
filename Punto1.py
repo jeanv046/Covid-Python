@@ -67,6 +67,12 @@ fall_dep = fallecidos.groupby('Nombre departamento').size()
 fall_dep_ord = fall_dep.sort_values(ascending=False).head(10)
 print("Los 10 departamentos con mas fallecidos: {}".format(fall_dep_ord))
 
+#Punto 13
+rec = data[data['Recuperado'] == 'Recuperado']
+rec_dep = rec.groupby('Nombre departamento').size()
+rec_dep_ord = rec_dep.sort_values(ascending=False).head(10)
+print("Los 10 departamentos con mas Recuperados: {}".format(rec_dep_ord))
+
 
 
 
