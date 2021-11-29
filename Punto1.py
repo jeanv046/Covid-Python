@@ -50,6 +50,11 @@ print("")
 print("Los departamentos afectados son...")
 print(data["Nombre departamento"].unique().tolist())
 
+#Punto 10
+print("")
+orden_casos = data.groupby('Ubicación del caso').size().sort_values(ascending=False)
+print("El Odenamiento queda asi: {}".format(orden_casos))
+
 
 
 
