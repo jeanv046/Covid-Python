@@ -55,6 +55,12 @@ print("")
 orden_casos = data.groupby('Ubicación del caso').size().sort_values(ascending=False)
 print("El Odenamiento queda asi: {}".format(orden_casos))
 
+#Punto 11
+print("")
+datos_agrupados = data.groupby('Nombre departamento')
+dep_cont = datos_agrupados.size().sort_values(ascending=False).head(10)
+print("Los 10 departamentos mas Casos de contagio: {}".format(dep_cont))
+
 
 
 
