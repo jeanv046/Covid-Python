@@ -90,6 +90,10 @@ rec_dep = rec.groupby('Nombre municipio').size()
 rec_dep_ord = rec_dep.sort_values(ascending=False).head(10)
 print("Los 10 municipios con mas Recuperados: {}".format(rec_dep_ord))
 
+#Punto 17
+agrupado = data.groupby(['Nombre departamento'])
+ordenado = agrupado.size().sort_values(ascending=False)
+print("las ciudades con mas casos de contagiados: {}".format(ordenado))
 
 
 
