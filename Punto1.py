@@ -110,6 +110,11 @@ print("")
 conta = data.groupby('Nombre del país').size().sort_values(ascending=False)
 print("El número de contagiados por país de procedencia: {}".format(conta))
 
+#Punto 21
+print("")
+fech = data.groupby('Fecha de diagnóstico').size().sort_values(ascending=False)
+print("Las fechas donde se presentaron mas contagios: {}".format(fech))
+
 
 
 
