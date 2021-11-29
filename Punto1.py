@@ -61,6 +61,12 @@ datos_agrupados = data.groupby('Nombre departamento')
 dep_cont = datos_agrupados.size().sort_values(ascending=False).head(10)
 print("Los 10 departamentos mas Casos de contagio: {}".format(dep_cont))
 
+#Punto 12
+fallecidos = data[data['Estado'] == 'Fallecido']
+fall_dep = fallecidos.groupby('Nombre departamento').size()
+fall_dep_ord = fall_dep.sort_values(ascending=False).head(10)
+print("Los 10 departamentos con mas fallecidos: {}".format(fall_dep_ord))
+
 
 
 
