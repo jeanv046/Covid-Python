@@ -84,6 +84,11 @@ fall_dep = fallecidos.groupby('Nombre municipio').size()
 fall_dep_ord = fall_dep.sort_values(ascending=False).head(10)
 print("Los 10 municipios con mas fallecidos: {}".format(fall_dep_ord))
 
+#Punto 16
+rec = data[data['Recuperado'] == 'Recuperado']
+rec_dep = rec.groupby('Nombre municipio').size()
+rec_dep_ord = rec_dep.sort_values(ascending=False).head(10)
+print("Los 10 municipios con mas Recuperados: {}".format(rec_dep_ord))
 
 
 
