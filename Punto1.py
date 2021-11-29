@@ -2,6 +2,7 @@
 
 import pandas
 import numpy as np
+import matplotlib.pyplot as plt
 filename = 'covid_22_noviembre.csv'
 data = pandas.read_csv(filename, header=0)
 
@@ -148,6 +149,24 @@ print("")
 dat = data.groupby(['Nombre departamento', 'Sexo'])
 cantidad = dat.Edad.mean()
 print("la cantidad de mujeres y hombres contagiados: {}".format(round(cantidad, 0)))
+
+#Punto 27
+print("")
+contagio = data.groupby('Fecha de diagnóstico').size().cumsum()
+
+fallecidos_total = data[data['Estado'] == 'Fallecido']
+muerte = fallecidos_total.groupby('Fecha de diagnóstico').size().cumsum()
+
+rec_total = data[data['Recuperado'] == 'Recuperado']
+recuperado = rec_total.groupby('Fecha de diagnóstico').size().cumsum()
+
+fig = plt.figure(figsize=(12, 5))
+p1, p2, p3 = plt.plot(contagio.index, contagio.values, muerte.index,
+                      muerte.values, recuperado.index, recuperado.values)
+plt.legend(('Contagio', 'Muerte', 'Recuperado'),
+           prop={'size': 10}, loc='upper right')
+plt.title("Grafico de contagio, muerte y recuperación Colombia")
+plt.show()
 
 
 
