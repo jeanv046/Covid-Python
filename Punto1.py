@@ -115,6 +115,12 @@ print("")
 fech = data.groupby('Fecha de diagnóstico').size().sort_values(ascending=False)
 print("Las fechas donde se presentaron mas contagios: {}".format(fech))
 
+#Punto 22
+canti = data.groupby('Estado').size()
+mor = ((canti / canti.sum()) * 100)['Fallecido']
+canti = data.groupby('Recuperado').size()
+Rec = ((canti / canti.sum()) * 100)['Recuperado']
+print("tasa de mortalidad {}%, recuperación {}% de Colombia".format(round(mor, 2), round(Rec, 2)))
 
 
 
